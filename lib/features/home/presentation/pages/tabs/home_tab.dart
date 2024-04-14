@@ -3,6 +3,7 @@ import 'package:e_commerce/features/home/data/models/BrandModel.dart';
 import 'package:e_commerce/features/home/presentation/bloc/home_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeTab extends StatefulWidget {
