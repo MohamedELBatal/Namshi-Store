@@ -1,14 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:e_commerce/core/errors/failuers.dart';
-import 'package:e_commerce/features/home/data/models/CategoriesModel.dart';
+import 'package:e_commerce/features/home/data/models/ProductsModel.dart';
 import 'package:e_commerce/features/home/domain/repositories/home_repo.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
-class GetCategoriesUseCase {
+class GetProductsUseCase {
   HomeRepo repo;
 
-  GetCategoriesUseCase(this.repo);
+  GetProductsUseCase(this.repo);
 
-  Future<Either<Failures, CategoriesModel>> call() => repo.getCategories();
+  Future<Either<Failures, ProductsModel>> call() => repo.getProducts();
 }

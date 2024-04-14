@@ -20,21 +20,27 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getBrands,
+    required TResult Function() getProducts,
     required TResult Function() getcategories,
+    required TResult Function(int index) changeButtomNavBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getBrands,
+    TResult? Function()? getProducts,
     TResult? Function()? getcategories,
+    TResult? Function(int index)? changeButtomNavBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getBrands,
+    TResult Function()? getProducts,
     TResult Function()? getcategories,
+    TResult Function(int index)? changeButtomNavBar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -42,21 +48,27 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(GetBrandsEvent value) getBrands,
+    required TResult Function(GetProductsEvent value) getProducts,
     required TResult Function(GetCategoriesEvent value) getcategories,
+    required TResult Function(ChangeNavBar value) changeButtomNavBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(GetBrandsEvent value)? getBrands,
+    TResult? Function(GetProductsEvent value)? getProducts,
     TResult? Function(GetCategoriesEvent value)? getcategories,
+    TResult? Function(ChangeNavBar value)? changeButtomNavBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(GetBrandsEvent value)? getBrands,
+    TResult Function(GetProductsEvent value)? getProducts,
     TResult Function(GetCategoriesEvent value)? getcategories,
+    TResult Function(ChangeNavBar value)? changeButtomNavBar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -119,7 +131,9 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getBrands,
+    required TResult Function() getProducts,
     required TResult Function() getcategories,
+    required TResult Function(int index) changeButtomNavBar,
   }) {
     return started();
   }
@@ -129,7 +143,9 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getBrands,
+    TResult? Function()? getProducts,
     TResult? Function()? getcategories,
+    TResult? Function(int index)? changeButtomNavBar,
   }) {
     return started?.call();
   }
@@ -139,7 +155,9 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getBrands,
+    TResult Function()? getProducts,
     TResult Function()? getcategories,
+    TResult Function(int index)? changeButtomNavBar,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -153,7 +171,9 @@ class _$StartedImpl implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(GetBrandsEvent value) getBrands,
+    required TResult Function(GetProductsEvent value) getProducts,
     required TResult Function(GetCategoriesEvent value) getcategories,
+    required TResult Function(ChangeNavBar value) changeButtomNavBar,
   }) {
     return started(this);
   }
@@ -163,7 +183,9 @@ class _$StartedImpl implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(GetBrandsEvent value)? getBrands,
+    TResult? Function(GetProductsEvent value)? getProducts,
     TResult? Function(GetCategoriesEvent value)? getcategories,
+    TResult? Function(ChangeNavBar value)? changeButtomNavBar,
   }) {
     return started?.call(this);
   }
@@ -173,7 +195,9 @@ class _$StartedImpl implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(GetBrandsEvent value)? getBrands,
+    TResult Function(GetProductsEvent value)? getProducts,
     TResult Function(GetCategoriesEvent value)? getcategories,
+    TResult Function(ChangeNavBar value)? changeButtomNavBar,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -227,7 +251,9 @@ class _$GetBrandsEventImpl implements GetBrandsEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getBrands,
+    required TResult Function() getProducts,
     required TResult Function() getcategories,
+    required TResult Function(int index) changeButtomNavBar,
   }) {
     return getBrands();
   }
@@ -237,7 +263,9 @@ class _$GetBrandsEventImpl implements GetBrandsEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getBrands,
+    TResult? Function()? getProducts,
     TResult? Function()? getcategories,
+    TResult? Function(int index)? changeButtomNavBar,
   }) {
     return getBrands?.call();
   }
@@ -247,7 +275,9 @@ class _$GetBrandsEventImpl implements GetBrandsEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getBrands,
+    TResult Function()? getProducts,
     TResult Function()? getcategories,
+    TResult Function(int index)? changeButtomNavBar,
     required TResult orElse(),
   }) {
     if (getBrands != null) {
@@ -261,7 +291,9 @@ class _$GetBrandsEventImpl implements GetBrandsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(GetBrandsEvent value) getBrands,
+    required TResult Function(GetProductsEvent value) getProducts,
     required TResult Function(GetCategoriesEvent value) getcategories,
+    required TResult Function(ChangeNavBar value) changeButtomNavBar,
   }) {
     return getBrands(this);
   }
@@ -271,7 +303,9 @@ class _$GetBrandsEventImpl implements GetBrandsEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(GetBrandsEvent value)? getBrands,
+    TResult? Function(GetProductsEvent value)? getProducts,
     TResult? Function(GetCategoriesEvent value)? getcategories,
+    TResult? Function(ChangeNavBar value)? changeButtomNavBar,
   }) {
     return getBrands?.call(this);
   }
@@ -281,7 +315,9 @@ class _$GetBrandsEventImpl implements GetBrandsEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(GetBrandsEvent value)? getBrands,
+    TResult Function(GetProductsEvent value)? getProducts,
     TResult Function(GetCategoriesEvent value)? getcategories,
+    TResult Function(ChangeNavBar value)? changeButtomNavBar,
     required TResult orElse(),
   }) {
     if (getBrands != null) {
@@ -293,6 +329,126 @@ class _$GetBrandsEventImpl implements GetBrandsEvent {
 
 abstract class GetBrandsEvent implements HomeEvent {
   const factory GetBrandsEvent() = _$GetBrandsEventImpl;
+}
+
+/// @nodoc
+abstract class _$$GetProductsEventImplCopyWith<$Res> {
+  factory _$$GetProductsEventImplCopyWith(_$GetProductsEventImpl value,
+          $Res Function(_$GetProductsEventImpl) then) =
+      __$$GetProductsEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetProductsEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetProductsEventImpl>
+    implements _$$GetProductsEventImplCopyWith<$Res> {
+  __$$GetProductsEventImplCopyWithImpl(_$GetProductsEventImpl _value,
+      $Res Function(_$GetProductsEventImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetProductsEventImpl implements GetProductsEvent {
+  const _$GetProductsEventImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getProducts()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetProductsEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getBrands,
+    required TResult Function() getProducts,
+    required TResult Function() getcategories,
+    required TResult Function(int index) changeButtomNavBar,
+  }) {
+    return getProducts();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getBrands,
+    TResult? Function()? getProducts,
+    TResult? Function()? getcategories,
+    TResult? Function(int index)? changeButtomNavBar,
+  }) {
+    return getProducts?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getBrands,
+    TResult Function()? getProducts,
+    TResult Function()? getcategories,
+    TResult Function(int index)? changeButtomNavBar,
+    required TResult orElse(),
+  }) {
+    if (getProducts != null) {
+      return getProducts();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetBrandsEvent value) getBrands,
+    required TResult Function(GetProductsEvent value) getProducts,
+    required TResult Function(GetCategoriesEvent value) getcategories,
+    required TResult Function(ChangeNavBar value) changeButtomNavBar,
+  }) {
+    return getProducts(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetBrandsEvent value)? getBrands,
+    TResult? Function(GetProductsEvent value)? getProducts,
+    TResult? Function(GetCategoriesEvent value)? getcategories,
+    TResult? Function(ChangeNavBar value)? changeButtomNavBar,
+  }) {
+    return getProducts?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetBrandsEvent value)? getBrands,
+    TResult Function(GetProductsEvent value)? getProducts,
+    TResult Function(GetCategoriesEvent value)? getcategories,
+    TResult Function(ChangeNavBar value)? changeButtomNavBar,
+    required TResult orElse(),
+  }) {
+    if (getProducts != null) {
+      return getProducts(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetProductsEvent implements HomeEvent {
+  const factory GetProductsEvent() = _$GetProductsEventImpl;
 }
 
 /// @nodoc
@@ -335,7 +491,9 @@ class _$GetCategoriesEventImpl implements GetCategoriesEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getBrands,
+    required TResult Function() getProducts,
     required TResult Function() getcategories,
+    required TResult Function(int index) changeButtomNavBar,
   }) {
     return getcategories();
   }
@@ -345,7 +503,9 @@ class _$GetCategoriesEventImpl implements GetCategoriesEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getBrands,
+    TResult? Function()? getProducts,
     TResult? Function()? getcategories,
+    TResult? Function(int index)? changeButtomNavBar,
   }) {
     return getcategories?.call();
   }
@@ -355,7 +515,9 @@ class _$GetCategoriesEventImpl implements GetCategoriesEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getBrands,
+    TResult Function()? getProducts,
     TResult Function()? getcategories,
+    TResult Function(int index)? changeButtomNavBar,
     required TResult orElse(),
   }) {
     if (getcategories != null) {
@@ -369,7 +531,9 @@ class _$GetCategoriesEventImpl implements GetCategoriesEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(GetBrandsEvent value) getBrands,
+    required TResult Function(GetProductsEvent value) getProducts,
     required TResult Function(GetCategoriesEvent value) getcategories,
+    required TResult Function(ChangeNavBar value) changeButtomNavBar,
   }) {
     return getcategories(this);
   }
@@ -379,7 +543,9 @@ class _$GetCategoriesEventImpl implements GetCategoriesEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(GetBrandsEvent value)? getBrands,
+    TResult? Function(GetProductsEvent value)? getProducts,
     TResult? Function(GetCategoriesEvent value)? getcategories,
+    TResult? Function(ChangeNavBar value)? changeButtomNavBar,
   }) {
     return getcategories?.call(this);
   }
@@ -389,7 +555,9 @@ class _$GetCategoriesEventImpl implements GetCategoriesEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(GetBrandsEvent value)? getBrands,
+    TResult Function(GetProductsEvent value)? getProducts,
     TResult Function(GetCategoriesEvent value)? getcategories,
+    TResult Function(ChangeNavBar value)? changeButtomNavBar,
     required TResult orElse(),
   }) {
     if (getcategories != null) {
@@ -404,13 +572,168 @@ abstract class GetCategoriesEvent implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$ChangeNavBarImplCopyWith<$Res> {
+  factory _$$ChangeNavBarImplCopyWith(
+          _$ChangeNavBarImpl value, $Res Function(_$ChangeNavBarImpl) then) =
+      __$$ChangeNavBarImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$ChangeNavBarImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$ChangeNavBarImpl>
+    implements _$$ChangeNavBarImplCopyWith<$Res> {
+  __$$ChangeNavBarImplCopyWithImpl(
+      _$ChangeNavBarImpl _value, $Res Function(_$ChangeNavBarImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$ChangeNavBarImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeNavBarImpl implements ChangeNavBar {
+  const _$ChangeNavBarImpl(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'HomeEvent.changeButtomNavBar(index: $index)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeNavBarImpl &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeNavBarImplCopyWith<_$ChangeNavBarImpl> get copyWith =>
+      __$$ChangeNavBarImplCopyWithImpl<_$ChangeNavBarImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getBrands,
+    required TResult Function() getProducts,
+    required TResult Function() getcategories,
+    required TResult Function(int index) changeButtomNavBar,
+  }) {
+    return changeButtomNavBar(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getBrands,
+    TResult? Function()? getProducts,
+    TResult? Function()? getcategories,
+    TResult? Function(int index)? changeButtomNavBar,
+  }) {
+    return changeButtomNavBar?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getBrands,
+    TResult Function()? getProducts,
+    TResult Function()? getcategories,
+    TResult Function(int index)? changeButtomNavBar,
+    required TResult orElse(),
+  }) {
+    if (changeButtomNavBar != null) {
+      return changeButtomNavBar(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetBrandsEvent value) getBrands,
+    required TResult Function(GetProductsEvent value) getProducts,
+    required TResult Function(GetCategoriesEvent value) getcategories,
+    required TResult Function(ChangeNavBar value) changeButtomNavBar,
+  }) {
+    return changeButtomNavBar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetBrandsEvent value)? getBrands,
+    TResult? Function(GetProductsEvent value)? getProducts,
+    TResult? Function(GetCategoriesEvent value)? getcategories,
+    TResult? Function(ChangeNavBar value)? changeButtomNavBar,
+  }) {
+    return changeButtomNavBar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetBrandsEvent value)? getBrands,
+    TResult Function(GetProductsEvent value)? getProducts,
+    TResult Function(GetCategoriesEvent value)? getcategories,
+    TResult Function(ChangeNavBar value)? changeButtomNavBar,
+    required TResult orElse(),
+  }) {
+    if (changeButtomNavBar != null) {
+      return changeButtomNavBar(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeNavBar implements HomeEvent {
+  const factory ChangeNavBar(final int index) = _$ChangeNavBarImpl;
+
+  int get index;
+  @JsonKey(ignore: true)
+  _$$ChangeNavBarImplCopyWith<_$ChangeNavBarImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomeState {
   RequestStatus get getBrandStatus => throw _privateConstructorUsedError;
+  RequestStatus get getProductsStatus => throw _privateConstructorUsedError;
   RequestStatus get getCategoriesStatus => throw _privateConstructorUsedError;
   BrandModel? get brandModel => throw _privateConstructorUsedError;
+  int get currentIndex => throw _privateConstructorUsedError;
   CategoriesModel? get categoriesModel => throw _privateConstructorUsedError;
+  ProductsModel? get productsModel => throw _privateConstructorUsedError;
   Failures? get brandFailure => throw _privateConstructorUsedError;
   Failures? get categoriesFailure => throw _privateConstructorUsedError;
+  Failures? get productsFailure => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -424,11 +747,15 @@ abstract class $HomeStateCopyWith<$Res> {
   @useResult
   $Res call(
       {RequestStatus getBrandStatus,
+      RequestStatus getProductsStatus,
       RequestStatus getCategoriesStatus,
       BrandModel? brandModel,
+      int currentIndex,
       CategoriesModel? categoriesModel,
+      ProductsModel? productsModel,
       Failures? brandFailure,
-      Failures? categoriesFailure});
+      Failures? categoriesFailure,
+      Failures? productsFailure});
 }
 
 /// @nodoc
@@ -445,16 +772,24 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @override
   $Res call({
     Object? getBrandStatus = null,
+    Object? getProductsStatus = null,
     Object? getCategoriesStatus = null,
     Object? brandModel = freezed,
+    Object? currentIndex = null,
     Object? categoriesModel = freezed,
+    Object? productsModel = freezed,
     Object? brandFailure = freezed,
     Object? categoriesFailure = freezed,
+    Object? productsFailure = freezed,
   }) {
     return _then(_value.copyWith(
       getBrandStatus: null == getBrandStatus
           ? _value.getBrandStatus
           : getBrandStatus // ignore: cast_nullable_to_non_nullable
+              as RequestStatus,
+      getProductsStatus: null == getProductsStatus
+          ? _value.getProductsStatus
+          : getProductsStatus // ignore: cast_nullable_to_non_nullable
               as RequestStatus,
       getCategoriesStatus: null == getCategoriesStatus
           ? _value.getCategoriesStatus
@@ -464,10 +799,18 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.brandModel
           : brandModel // ignore: cast_nullable_to_non_nullable
               as BrandModel?,
+      currentIndex: null == currentIndex
+          ? _value.currentIndex
+          : currentIndex // ignore: cast_nullable_to_non_nullable
+              as int,
       categoriesModel: freezed == categoriesModel
           ? _value.categoriesModel
           : categoriesModel // ignore: cast_nullable_to_non_nullable
               as CategoriesModel?,
+      productsModel: freezed == productsModel
+          ? _value.productsModel
+          : productsModel // ignore: cast_nullable_to_non_nullable
+              as ProductsModel?,
       brandFailure: freezed == brandFailure
           ? _value.brandFailure
           : brandFailure // ignore: cast_nullable_to_non_nullable
@@ -475,6 +818,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
       categoriesFailure: freezed == categoriesFailure
           ? _value.categoriesFailure
           : categoriesFailure // ignore: cast_nullable_to_non_nullable
+              as Failures?,
+      productsFailure: freezed == productsFailure
+          ? _value.productsFailure
+          : productsFailure // ignore: cast_nullable_to_non_nullable
               as Failures?,
     ) as $Val);
   }
@@ -490,11 +837,15 @@ abstract class _$$HomeStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {RequestStatus getBrandStatus,
+      RequestStatus getProductsStatus,
       RequestStatus getCategoriesStatus,
       BrandModel? brandModel,
+      int currentIndex,
       CategoriesModel? categoriesModel,
+      ProductsModel? productsModel,
       Failures? brandFailure,
-      Failures? categoriesFailure});
+      Failures? categoriesFailure,
+      Failures? productsFailure});
 }
 
 /// @nodoc
@@ -509,16 +860,24 @@ class __$$HomeStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? getBrandStatus = null,
+    Object? getProductsStatus = null,
     Object? getCategoriesStatus = null,
     Object? brandModel = freezed,
+    Object? currentIndex = null,
     Object? categoriesModel = freezed,
+    Object? productsModel = freezed,
     Object? brandFailure = freezed,
     Object? categoriesFailure = freezed,
+    Object? productsFailure = freezed,
   }) {
     return _then(_$HomeStateImpl(
       getBrandStatus: null == getBrandStatus
           ? _value.getBrandStatus
           : getBrandStatus // ignore: cast_nullable_to_non_nullable
+              as RequestStatus,
+      getProductsStatus: null == getProductsStatus
+          ? _value.getProductsStatus
+          : getProductsStatus // ignore: cast_nullable_to_non_nullable
               as RequestStatus,
       getCategoriesStatus: null == getCategoriesStatus
           ? _value.getCategoriesStatus
@@ -528,10 +887,18 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.brandModel
           : brandModel // ignore: cast_nullable_to_non_nullable
               as BrandModel?,
+      currentIndex: null == currentIndex
+          ? _value.currentIndex
+          : currentIndex // ignore: cast_nullable_to_non_nullable
+              as int,
       categoriesModel: freezed == categoriesModel
           ? _value.categoriesModel
           : categoriesModel // ignore: cast_nullable_to_non_nullable
               as CategoriesModel?,
+      productsModel: freezed == productsModel
+          ? _value.productsModel
+          : productsModel // ignore: cast_nullable_to_non_nullable
+              as ProductsModel?,
       brandFailure: freezed == brandFailure
           ? _value.brandFailure
           : brandFailure // ignore: cast_nullable_to_non_nullable
@@ -539,6 +906,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
       categoriesFailure: freezed == categoriesFailure
           ? _value.categoriesFailure
           : categoriesFailure // ignore: cast_nullable_to_non_nullable
+              as Failures?,
+      productsFailure: freezed == productsFailure
+          ? _value.productsFailure
+          : productsFailure // ignore: cast_nullable_to_non_nullable
               as Failures?,
     ));
   }
@@ -549,30 +920,44 @@ class __$$HomeStateImplCopyWithImpl<$Res>
 class _$HomeStateImpl implements _HomeState {
   const _$HomeStateImpl(
       {this.getBrandStatus = RequestStatus.init,
+      this.getProductsStatus = RequestStatus.init,
       this.getCategoriesStatus = RequestStatus.init,
       this.brandModel,
+      this.currentIndex = 0,
       this.categoriesModel,
+      this.productsModel,
       this.brandFailure,
-      this.categoriesFailure});
+      this.categoriesFailure,
+      this.productsFailure});
 
   @override
   @JsonKey()
   final RequestStatus getBrandStatus;
   @override
   @JsonKey()
+  final RequestStatus getProductsStatus;
+  @override
+  @JsonKey()
   final RequestStatus getCategoriesStatus;
   @override
   final BrandModel? brandModel;
   @override
+  @JsonKey()
+  final int currentIndex;
+  @override
   final CategoriesModel? categoriesModel;
+  @override
+  final ProductsModel? productsModel;
   @override
   final Failures? brandFailure;
   @override
   final Failures? categoriesFailure;
+  @override
+  final Failures? productsFailure;
 
   @override
   String toString() {
-    return 'HomeState(getBrandStatus: $getBrandStatus, getCategoriesStatus: $getCategoriesStatus, brandModel: $brandModel, categoriesModel: $categoriesModel, brandFailure: $brandFailure, categoriesFailure: $categoriesFailure)';
+    return 'HomeState(getBrandStatus: $getBrandStatus, getProductsStatus: $getProductsStatus, getCategoriesStatus: $getCategoriesStatus, brandModel: $brandModel, currentIndex: $currentIndex, categoriesModel: $categoriesModel, productsModel: $productsModel, brandFailure: $brandFailure, categoriesFailure: $categoriesFailure, productsFailure: $productsFailure)';
   }
 
   @override
@@ -582,27 +967,39 @@ class _$HomeStateImpl implements _HomeState {
             other is _$HomeStateImpl &&
             (identical(other.getBrandStatus, getBrandStatus) ||
                 other.getBrandStatus == getBrandStatus) &&
+            (identical(other.getProductsStatus, getProductsStatus) ||
+                other.getProductsStatus == getProductsStatus) &&
             (identical(other.getCategoriesStatus, getCategoriesStatus) ||
                 other.getCategoriesStatus == getCategoriesStatus) &&
             (identical(other.brandModel, brandModel) ||
                 other.brandModel == brandModel) &&
+            (identical(other.currentIndex, currentIndex) ||
+                other.currentIndex == currentIndex) &&
             (identical(other.categoriesModel, categoriesModel) ||
                 other.categoriesModel == categoriesModel) &&
+            (identical(other.productsModel, productsModel) ||
+                other.productsModel == productsModel) &&
             (identical(other.brandFailure, brandFailure) ||
                 other.brandFailure == brandFailure) &&
             (identical(other.categoriesFailure, categoriesFailure) ||
-                other.categoriesFailure == categoriesFailure));
+                other.categoriesFailure == categoriesFailure) &&
+            (identical(other.productsFailure, productsFailure) ||
+                other.productsFailure == productsFailure));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       getBrandStatus,
+      getProductsStatus,
       getCategoriesStatus,
       brandModel,
+      currentIndex,
       categoriesModel,
+      productsModel,
       brandFailure,
-      categoriesFailure);
+      categoriesFailure,
+      productsFailure);
 
   @JsonKey(ignore: true)
   @override
@@ -614,24 +1011,36 @@ class _$HomeStateImpl implements _HomeState {
 abstract class _HomeState implements HomeState {
   const factory _HomeState(
       {final RequestStatus getBrandStatus,
+      final RequestStatus getProductsStatus,
       final RequestStatus getCategoriesStatus,
       final BrandModel? brandModel,
+      final int currentIndex,
       final CategoriesModel? categoriesModel,
+      final ProductsModel? productsModel,
       final Failures? brandFailure,
-      final Failures? categoriesFailure}) = _$HomeStateImpl;
+      final Failures? categoriesFailure,
+      final Failures? productsFailure}) = _$HomeStateImpl;
 
   @override
   RequestStatus get getBrandStatus;
+  @override
+  RequestStatus get getProductsStatus;
   @override
   RequestStatus get getCategoriesStatus;
   @override
   BrandModel? get brandModel;
   @override
+  int get currentIndex;
+  @override
   CategoriesModel? get categoriesModel;
+  @override
+  ProductsModel? get productsModel;
   @override
   Failures? get brandFailure;
   @override
   Failures? get categoriesFailure;
+  @override
+  Failures? get productsFailure;
   @override
   @JsonKey(ignore: true)
   _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
