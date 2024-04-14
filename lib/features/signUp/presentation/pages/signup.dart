@@ -31,17 +31,17 @@ class SignUpScreen extends StatelessWidget {
       ),
       child: BlocConsumer<SignupBloc, SignupState>(
         listener: (context, state) {
-          if (state.status == ScreenStatus.loading) {
+          if (state.status == RequestStatus.loading) {
             showDialog(
               context: context,
               builder: (context) => const AlertDialog(
                 title: Center(child: CircularProgressIndicator()),
               ),
             );
-          } else if (state.status == ScreenStatus.success) {
+          } else if (state.status == RequestStatus.success) {
             Navigator.pushNamedAndRemoveUntil(
                 context, AppRoutesName.home, (route) => false);
-          } else if (state.status == ScreenStatus.failure) {
+          } else if (state.status == RequestStatus.failure) {
             showDialog(
               context: context,
               builder: (context) => AlertDialog(

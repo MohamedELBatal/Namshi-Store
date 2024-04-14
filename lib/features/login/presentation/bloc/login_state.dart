@@ -4,7 +4,7 @@ part of 'login_bloc.dart';
 
 @immutable
 class LoginState {
-  ScreenStatus? status;
+  RequestStatus? status;
 
   ResponseEntity? responseEntity;
   Failures? failures;
@@ -12,7 +12,7 @@ class LoginState {
   LoginState({this.status, this.responseEntity, this.failures});
 
   LoginState copyWith({
-    ScreenStatus? status,
+    RequestStatus? status,
     ResponseEntity? responseEntity,
     Failures? failures,
   }) {
@@ -24,5 +24,5 @@ class LoginState {
 }
 
 class LoginInitialState extends LoginState {
-  LoginInitialState() : super(status: ScreenStatus.init);
+  LoginInitialState() : super(status: RequestStatus.init);
 }

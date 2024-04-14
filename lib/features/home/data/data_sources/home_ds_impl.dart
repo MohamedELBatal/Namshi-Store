@@ -5,17 +5,19 @@ import 'package:e_commerce/features/home/data/models/BrandModel.dart';
 import 'package:e_commerce/features/home/data/models/CategoriesModel.dart';
 
 class HomeDSImpl implements HomeDs {
+  ApiManager apiManager;
+
+  HomeDSImpl(this.apiManager);
+
   @override
   Future<BrandModel> getBrands() async {
-    ApiManager apiManager = ApiManager();
     var response = await apiManager.getData(EndPoint.brands);
     BrandModel brandModel = BrandModel.fromJson(response.data);
     return brandModel;
   }
 
   @override
-  Future<CategoriesModel> getCategories()async {
-    ApiManager apiManager = ApiManager();
+  Future<CategoriesModel> getCategories() async {
     var response = await apiManager.getData(EndPoint.categories);
     CategoriesModel categoriesModel = CategoriesModel.fromJson(response.data);
     return categoriesModel;

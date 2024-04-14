@@ -20,15 +20,15 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     });
 
     on<LoginButtonEvent>((event, emit) async {
-      emit(state.copyWith(status: ScreenStatus.loading));
+      emit(state.copyWith(status: RequestStatus.loading));
 
       var result = await loginUseCase.call(event.email, event.password);
       result.fold(
           (l) =>
-              {emit(state.copyWith(status: ScreenStatus.failure, failures: l))},
+              {emit(state.copyWith(status: RequestStatus.failure, failures: l))},
           (r) => {
                 emit(state.copyWith(
-                    status: ScreenStatus.success, responseEntity: r))
+                    status: RequestStatus.success, responseEntity: r))
               });
     });
   }
