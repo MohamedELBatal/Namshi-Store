@@ -1,4 +1,5 @@
 import 'package:e_commerce/config.dart';
+import 'package:e_commerce/config/routes/app_router.dart';
 import 'package:e_commerce/core/utils/app_colors.dart';
 import 'package:e_commerce/features/home/presentation/bloc/home_bloc.dart';
 import 'package:e_commerce/features/home/presentation/pages/tabs/fav_tab.dart';
@@ -16,11 +17,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-      getIt<HomeBloc>()
+      create: (context) => getIt<HomeBloc>()
         ..add(const GetBrandsEvent())
         ..add(const GetProductsEvent())
-        ..add(const GetCategoriesEvent()),
+        ..add(const GetCategoriesEvent())
+        ..add(const GetCartEvent()),
       child: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           return Scaffold(
@@ -36,8 +37,7 @@ class HomeScreen extends StatelessWidget {
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: state.currentIndex,
               onTap: (value) {
-                BlocProvider.of<HomeBloc>(context)
-                    .add(ChangeNavBar(value));
+                BlocProvider.of<HomeBloc>(context).add(ChangeNavBar(value));
               },
               backgroundColor: AppColors.BackGround,
               type: BottomNavigationBarType.fixed,
@@ -61,8 +61,8 @@ class HomeScreen extends StatelessWidget {
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(
-                                  vertical: 5.h),
+                              contentPadding:
+                                  EdgeInsets.symmetric(vertical: 5.h),
                               border: OutlineInputBorder(
                                 borderSide: const BorderSide(
                                     width: 1, color: Color(0xFF004182)),
@@ -90,11 +90,16 @@ class HomeScreen extends StatelessWidget {
                         width: 20,
                       ),
                       InkWell(
-                        onTap: () {},
-                        child: Icon(
-                          Icons.shopping_cart,
-                          size: 30.0.sp,
-                          color: const Color(0xff004182),
+                        onTap: () {
+                          Navigator.pushNamed(context, AppRoutesName.cart);
+                        },
+                        child: Badge(
+                          label: Text(state.cartItems.toString()),
+                          child: Icon(
+                            Icons.shopping_cart,
+                            size: 30.0.sp,
+                            color: const Color(0xff004182),
+                          ),
                         ),
                       ),
                     ],

@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:e_commerce/core/cache/shared_pref.dart';
 import 'package:e_commerce/core/errors/failuers.dart';
 import 'package:e_commerce/features/login/data/data_sources/remote/login_ds.dart';
 import 'package:e_commerce/features/login/domain/entity/ResponseEntity.dart';
@@ -14,6 +15,7 @@ class LoginRepoImpl implements LoginRepo {
       String email, String password) async {
     try {
       var userModel = await loginRemoteDS.login(email, password);
+      CacheHelper.saveData("token", userModel.token);
       return Right(userModel);
     } catch (e) {
       return Left(RemoteFailures(e.toString()));
