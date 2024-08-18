@@ -9,6 +9,14 @@ class CartScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Cart"),
       ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Not Found Any Products")
+          ],
+        ),
+      ),
     );
   }
 }

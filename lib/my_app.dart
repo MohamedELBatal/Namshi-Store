@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) =>  MaterialApp(
+
         debugShowCheckedModeBanner: false,
-      
         onGenerateRoute: (settings)=> AppRoute.onGenerate(settings),
       ),
     );
