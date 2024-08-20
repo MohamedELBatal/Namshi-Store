@@ -9,10 +9,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   LoginScreen({super.key});
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   var emailController = TextEditingController();
+
   var passwordController = TextEditingController();
 
   @override
@@ -47,30 +53,36 @@ class LoginScreen extends StatelessWidget {
           }
         }, builder: (context, state) {
           return Scaffold(
+              resizeToAvoidBottomInset: true,
               backgroundColor: AppColors.BackGround,
-              body: Padding(
-                  padding: EdgeInsets.all(8.r),
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TextFormField(
-                          controller: emailController,
-                          decoration: InputDecoration(
-                              label: const Text("Email"),
-                              filled: true,
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(16.r),
-                              ),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(16.r))),
-                        ),
-                        SizedBox(
-                          height: 18.h,
-                        ),
-                        TextFormField(
-                          controller: passwordController,
-                          decoration: InputDecoration(
+              body: SingleChildScrollView(
+                child: Padding(
+                    padding: EdgeInsets.all(8.r),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.4,
+                            child: Image.asset("assets/images/logo.png"),
+                          ),
+                          TextFormField(
+                            controller: emailController,
+                            decoration: InputDecoration(
+                                label: const Text("Email"),
+                                filled: true,
+                                fillColor: Colors.white,
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(16.r),
+                                ),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(16.r))),
+                          ),
+                          SizedBox(
+                            height: 18.h,
+                          ),
+                          TextFormField(
+                            controller: passwordController,
+                            decoration: InputDecoration(
                               label: const Text("Password"),
                               filled: true,
                               fillColor: Colors.white,
@@ -78,47 +90,52 @@ class LoginScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(16.r),
                               ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(16.r))),
-                        ),
-                        SizedBox(
-                          height: 18.h,
-                        ),
-                        SizedBox(
-                            width: double.infinity,
-                            child: ElevatedButton(
-                                onPressed: () {
-                                  BlocProvider.of<LoginBloc>(context).add(
-                                      LoginButtonEvent(
-                                          "ahmedmutti@gmail.com", "Ahmed@123"));
+                                borderRadius: BorderRadius.circular(16.r),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 18.h,
+                          ),
+                          SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    BlocProvider.of<LoginBloc>(context).add(
+                                      LoginButtonEvent("mohamed2211@gmail.com",
+                                          "123456"),
+                                    );
+                                  },
+                                  child: const Text("Login"))),
+                          Padding(
+                            padding: EdgeInsets.only(top: 32.h),
+                            child: Center(
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, AppRoutesName.signUp);
                                 },
-                                child: const Text("Login"))),
-                        Padding(
-                          padding: EdgeInsets.only(top: 32.h),
-                          child: Center(
-                            child: InkWell(
-                              onTap: () {
-                                 Navigator.pushNamed(context, AppRoutesName.signUp);
-                              },
-                              child: Text.rich(
-                                TextSpan(
-                                  children: [
-                                    TextSpan(
-                                        text: "Don't have an account ?",
-                                        style: TextStyle(
-                                            fontSize: 12.sp,
-                                            color: Colors.white)),
-                                    TextSpan(
-                                        text: " " + 'Create Account',
-                                        style: TextStyle(
-                                            fontSize: 16.sp,
-                                            color: Colors.white)),
-                                  ],
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                          text: "Don't have an account ?",
+                                          style: TextStyle(
+                                              fontSize: 12.sp,
+                                              color: Colors.white)),
+                                      TextSpan(
+                                          text: " " + 'Create Account',
+                                          style: TextStyle(
+                                              fontSize: 16.sp,
+                                              color: Colors.white)),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ])));
+                        ])),
+              ));
         }));
   }
 }

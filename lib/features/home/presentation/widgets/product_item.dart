@@ -15,7 +15,7 @@ class ProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var product = productModel?.data?[index];
+    var product = productModel?.products?[index];
     return InkWell(
       onTap: () {
         // Navigator.of(context).pushNamed(
@@ -41,33 +41,34 @@ class ProductItem extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15.r),
                       ),
                       child: CachedNetworkImage(
-                          imageUrl: product?.images?.first ?? "",
-                          fit: BoxFit.fill,
-                          width: double.infinity,
-                          height: 191.h,
-                          errorWidget: (context, url, error) =>
-                              const Icon(Icons.error_outline, size: 40)),
+                        imageUrl: product?.images?.first ?? "",
+                        fit: BoxFit.fitHeight,
+                        width: double.infinity,
+                        height: 191.h,
+                        errorWidget: (context, url, error) =>
+                            const Icon(Icons.error_outline, size: 40),
+                      ),
                     ),
                     Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 10.h, horizontal: 7.w),
                       child: Align(
                         alignment: Alignment.topRight,
-                        child: Container(
-                          // margin: const EdgeInsets.only(left: 20),
-                          padding: EdgeInsets.all(2.h.w),
-
-                          margin: EdgeInsets.only(left: 6.w),
-
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15.r),
-                            // border:
-                            //     Border.all(width: 2.w, color: Colors.blueGrey)
-                          ),
-                          child: const Icon(
-                            Icons.favorite_outline,
-                            color: AppColors.BlueColor,
+                        child: InkWell(
+                          onTap: () {},
+                          child: Container(
+                            padding: EdgeInsets.all(2.h.w),
+                            margin: EdgeInsets.only(left: 6.w),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15.r),
+                              // border:
+                              //     Border.all(width: 1.w, color: Colors.blueGrey)
+                            ),
+                            child: const Icon(
+                              Icons.favorite_outline,
+                              color: AppColors.BlueColor,
+                            ),
                           ),
                         ),
                       ),
@@ -83,7 +84,7 @@ class ProductItem extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 8.w),
                     child: Text(
-                      product?.brand?.name ?? "",
+                      product?.brand ?? " ",
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -91,7 +92,7 @@ class ProductItem extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 8.w),
                     child: Text(
-                      productModel?.data?[index].description ?? "",
+                      productModel?.products?[index].title ?? "",
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -100,9 +101,7 @@ class ProductItem extends StatelessWidget {
                   Row(
                     children: [
                       SizedBox(width: 8.w),
-                      Text("Egp ${product?.price.toString() ?? ""}"),
-                      SizedBox(width: 16.w),
-                      const Text("EGP 1200"),
+                      Text("USD ${product?.price.toString() ?? ""}"),
                     ],
                   ),
                   SizedBox(height: 5.h),
@@ -113,18 +112,19 @@ class ProductItem extends StatelessWidget {
                     child: Row(
                       children: [
                         const Text("Review"),
-                        SizedBox(width: 4.w),
-                        Text(product?.ratingsAverage.toString() ?? ""),
-                        SizedBox(width: 4.w),
+                        SizedBox(width: 10.w),
+                        Text("(${product?.rating.toString() ?? ""})"),
+                        SizedBox(width: 3.w),
                         const Icon(
                           Icons.star,
-                          color: Colors.yellow,
+                          color: Colors.amber,
+                          size: 19,
                         ),
                         const Spacer(),
                         InkWell(
                           onTap: () {
                             BlocProvider.of<HomeBloc>(context)
-                                .add(AddToCart(product?.id ?? ""));
+                                .add(AddToCart(product?.title ?? ""));
                           },
                           child: Container(
                             padding: EdgeInsets.all(5.w.h),

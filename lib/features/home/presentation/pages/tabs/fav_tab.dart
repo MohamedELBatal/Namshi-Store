@@ -5,8 +5,11 @@ class FavTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
+    return const Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+      Text("Not Found Any Favourite Products"),
+      ],
     );
   }
 }

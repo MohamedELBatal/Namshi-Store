@@ -11,9 +11,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -29,10 +34,7 @@ class HomeScreen extends StatelessWidget {
               backgroundColor: Colors.white,
               elevation: 0,
               leadingWidth: 83.w,
-              leading: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: SvgPicture.asset('assets/images/route.svg'),
-              ),
+              leading: Image.asset('assets/images/logo.png',color: const Color(0xFF004182),),
             ),
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: state.currentIndex,
